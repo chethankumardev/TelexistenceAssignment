@@ -55,8 +55,3 @@ jobs:
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_3B137662FCBF49569EA44E7405D3BBA6 }}
           package: .
-      - name: Run EF 
-        run: | 
-          dotnet tool install --global dotnet-ef
-          dotnet tool restore
-          dotnet ef database update
